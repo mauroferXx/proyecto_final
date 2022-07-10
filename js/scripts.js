@@ -11,11 +11,19 @@ function addToCarritoItem(e){
   const button = e.target
   const item = button.closest('.card')
   const itemTitle = item.querySelector('.card-title').textContent;
+  const itemID =item.querySelector('.card-id').textContent;
+  const itemStock =item.querySelector('.card-stock').textContent;
+  const itemCodigo =item.querySelector('.card-codigo').textContent;
+  const itemEstado =item.querySelector('.card-estado').textContent;
   const itemPrice = item.querySelector('.precio').textContent;
   const itemImg = item.querySelector('.card-img-top').src;
   
   const newItem = {
     title: itemTitle,
+    id: itemID,
+    stock: itemStock,
+    codigo: itemCodigo,
+    estado: itemEstado,
     precio: itemPrice,
     img: itemImg,
     cantidad: 1

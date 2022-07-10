@@ -59,7 +59,7 @@
     <div class="alert container position-sticky top-0 alert-danger remove" role="alert">
       ¡Producto Eliminado del Carrito!
     </div>
-
+    
     <div class="tab-content" id="pills-tabContent">
       <div
         class="tab-pane fade "
@@ -142,10 +142,14 @@
       var card = 
        `<div class="col d-flex justify-content-center mb-4">
           <div class="card shadow mb-1 bg-light rounded" style="width: 20rem;">
-            <h5 class="card-title pt-2 text-center text-alert">${nombre}</h5>
+            <h5 class=  "card-title pt-2 text-center text-alert " > ${nombre}</h5>
             <img src="${imagen}" class="card-img-top" alt="...">
             <div class="card-body">
-              <p class="card-text text-black-50 description">${descripcion}</p>
+              <p class="card-codigo text-black-50 description" >${codigo}</p>
+              <p class="card-text text-black-50 description" >${descripcion}</p>
+              <div class="card-id" hidden>${id_producto}</div>
+              <div class="card-stock" hidden>${stock}</div>
+              <div class="card-estado" hidden>${estado}</div>
               <h5 class="text-alert">$ <span class="precio">${valor_venta}</span></h5>
               <div class="d-grid gap-2">
               <button  class="btn btn-success button">Añadir al Carrito</button>
