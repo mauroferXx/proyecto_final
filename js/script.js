@@ -38,3 +38,4 @@ $(document).on('click', '#botonEnviarContacto', function(){
     alert('¡Mensaje enviado!, estimado/a  pronto nos comunicaremos con usted');
 
 });
+
