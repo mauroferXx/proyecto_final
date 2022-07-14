@@ -88,6 +88,7 @@ $(document).on('click', '#btnRegistrarUsuario', function(){
           
     }
         else{
+          alert('Gracias por registrarse!, será redirigido a la página de inicio de sesión');
         //cargar los datos mediante ajax
         $.ajax({
           url: API_URL+'usuarios', 
@@ -130,12 +131,12 @@ $(document).on('click', '#btnRegistrarUsuario', function(){
     var fono = $('#inputFono').val();
     var comuna = $('#comunas').val();
     if (correo == '' || password == '' || nombre1 == '' || apellido1 == '' || direccion == '' || fono == '' || comuna == ''){
-      alert('Debe llenar todos los campos correo, password, nombre, apellido, direccion, fono y comuna!');
+      //alert('Debe llenar todos los campos correo, password, nombre, apellido, direccion, fono y comuna!');
       
     }
     else{
     //console.log(comuna)
-      alert('Gracias por registrarse!, será redirigido a la página de inicio de sesión');
+      //alert('Gracias por registrarse!, será redirigido a la página de inicio de sesión');
 
     // para comprobar que se capturan los datos del form
     //console.log(correo, password, estado, nombre1, nombre2, apellido1, apellido2, direccion, fono, comuna);
@@ -161,11 +162,17 @@ $(document).on('click', '#btnRegistrarUsuario', function(){
       }),
       success: function(respuesta) {
         console.log(respuesta);
-        
+        //volver_inicio();
        }
     })
   }
 });
+
+// función para volver al inicio de sesión
+function volver_inicio(){
+  window.location.href = 'index.html';
+}
+//volver_inicio();
 
 function limpiarFormulario(){
     $('#inputCorreo').val('');

@@ -23,12 +23,16 @@
     <input class="controls" type="password" id="inputPassword" placeholder="Ingrese su Contraseña">
     <input class="controls" type="text" id="inputFono" placeholder="Ingrese su Teléfono">
     <input class="controls" type="text" id="inputDireccion" placeholder="Ingrese su Dirección">
-    <select class="controls" required="required" id="comunas" name="comunas" placeholder="Seleccione Comuna">
-    <option id="nom-comuna" value="-1">Seleccione Comuna</option></select>
+    <select class="controls" required="required" id="comunas" name="comunas" placeholder ="Seleccione Comuna">
+    <!--<option id="nom-comuna" value="-1"></option>-->
+    <option hidden value="" disabled selected>Comuna</option>
+  
+    </select>
 
     <p>Estoy de acuerdo con <a href="" id="condiciones">Términos y Condiciones</a></p>
     <br>
-    <center><a id="btnRegistrarUsuario" class="btn btn-primary" type="submit">Registrar</a></center>
+    <a id="btnRegistrarUsuario" class="btn btn-primary" type="submit">Registrar</a>
+    <a id="btnVolver" href= "index.html" class= "btn btnVolver" type="button">Volver</a>
     <br>    
     <p><a href="index.html">¿Tienes una Cuenta?</a></p>
   </section>

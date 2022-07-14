@@ -18,6 +18,10 @@
         <a href="#contact">Contacto</a>
     </nav>
 
+    <div id="tipoUsuario" onload="">
+        <h2 class="badge-info" id="usuario">¡Hola Invitado!</h2>
+    </div>
+
     <div class="icons">
         <div class="fas fa-bars" id="menu-btn"></div>
         <div class="fas fa-user" id="login-btn"></div>
@@ -25,16 +29,17 @@
 
     <form action="" class="login-form">
         <h3>Login</h3>
-        <input type="email" name="" placeholder="Ingresa tu correo" id="" class="box">
-        <input type="password" name="" placeholder="Ingresa tu contraseña" id="" class="box">
-        <div class="remember">
+        <input type="email" name="" placeholder="Ingresa tu correo" id="correoUsuario"class="box">
+        <input type="password" name="" placeholder="Ingresa tu contraseña" id="contraseña" class="box">
+        <!--<div class="remember">
             <input type="checkbox" name="" id="remember-me">
             <label for="remember-me">Recuérdame</label>
         </div>
-        <input type="submit" value="Iniciar sesión" class="btn">
+        -->
+        <input type="button" onclick="validarUsuario()" value="Iniciar sesión" class="btn" id="iniciarSesion">
         <div class="links">
             <a href="#">¿Olvidaste tu contraseña?</a>
-            <a href="registro.html">Registrarse</a>
+            <a href="registro.html" id="botonRegistro" enabled="true" >Registrarse</a>
         </div>
     </form>
 </header>
@@ -74,11 +79,11 @@
 
     <form action="">
         <h3>Contáctanos</h3>
-        <input type="text" placeholder="tu nombre" class="box">
-        <input type="email" placeholder="tu correo" class="box">
+        <input type="text" placeholder="tu nombre" class="box" id="inputNombre">
+        <input type="email" placeholder="tu correo" class="box" id="inputCorreo">
         <input type="tumber" placeholder="tu número de contacto" class="box">
         <textarea name="" placeholder="déjanos un mensaje" id="" cols="30" rows="10"></textarea>
-        <input type="submit" value="enviar mensaje" class="btn">
+        <input onclick="contacto()" type="submit" value="enviar mensaje" class="btn" id="botonEnviarContacto">
     </form>
 
 </section>

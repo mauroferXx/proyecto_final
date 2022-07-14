@@ -15,7 +15,8 @@ function actualizarTabla(){
     $.ajax({
       url: API_URL+'producto_car',
       type: 'GET',
-      dataType: 'json',
+      //dataType: 'json',
+      contentype: 'application/json',
       success: function(respuesta){
       //console.log(respuesta);
         
